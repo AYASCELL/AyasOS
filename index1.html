@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayas OS - Coming Soon</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Base specific styles */
+        .showcase-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 60px;
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .showcase-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        /* Language Toggle Classes */
+        .lang-btn {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .lang-btn:hover {
+            background: var(--primary-gold);
+            color: var(--dark-bg);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Default state: English */
+        .lang-tr { display: none !important; }
+        .lang-en { display: inline !important; }
+        
+        /* When Turkish is active */
+        .show-tr .lang-tr { display: inline !important; }
+        .show-tr .lang-en { display: none !important; }
+
+        /* Full height for coming soon page */
+        .hero-section.coming-soon {
+            min-height: calc(100vh - 80px); /* Account for header */
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="starfield-canvas"></canvas>
+    <div class="glass-overlay"></div>
+
+    <header class="main-header glass">
+        <nav class="navbar">
+            <a href="#" class="logo-link">
+                <img src="assets/ayasoslogo.png" alt="Ayas OS Logo" class="header-logo-image">
+                <span class="gradient-text header-logo-text glow-text">Ayas OS</span>
+            </a>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="https://ayascell.github.io/ayas-discussions/" target="_blank"><span class="lang-en">Community</span><span class="lang-tr">Topluluk</span></a></li>
+                <li>
+                    <button id="lang-toggle" class="lang-btn">
+                        <i class="fas fa-globe"></i> <span id="current-lang">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section coming-soon">
+        <div class="hero-content">
+            <div class="profile-avatar avatar-glow" style="border: none; background: transparent;">
+                <img src="assets/ayasoslogo.png" alt="Ayas OS Logo" style="object-fit: contain; filter: drop-shadow(0 0 20px rgba(212,175,55,0.5));">
+            </div>
+            <h1 class="gradient-text mega-title" style="font-size: 4em;">
+                <span class="lang-en">Ayas OS</span>
+                <span class="lang-tr">Ayas OS</span>
+            </h1>
+            <h3 class="subtitle type-writer">
+                <span class="lang-en">Coming Soon.</span>
+                <span class="lang-tr">Çok Yakında.</span>
+            </h3>
+            <p>
+                <span class="lang-en">We are working hard to build the ultimate Debian-based Linux experience. The operating system is currently under active development and will be available soon.</span>
+                <span class="lang-tr">Kusursuz Debian tabanlı Linux deneyimini inşa etmek için sıkı çalışıyoruz. İşletim sistemi şu anda aktif geliştirme aşamasındadır ve çok yakında yayınlanacaktır.</span>
+            </p>
+            <div class="hero-buttons">
+                <a href="https://ayascell.github.io/ayas-discussions/" target="_blank" class="link-button solid gold-gradient">
+                    <span class="lang-en">Join the Community <i class="fas fa-users"></i></span>
+                    <span class="lang-tr" style="color: #05050A;">Topluluğa Katıl <i class="fas fa-users"></i></span>
+                </a>
+                <a href="https://github.com/AYASCELL" target="_blank" class="link-button outline glow-hover">
+                    <span class="lang-en">Follow Progress <i class="fab fa-github"></i></span>
+                    <span class="lang-tr">Gelişmeleri Takip Et <i class="fab fa-github"></i></span>
+                </a>
+            </div>
+            
+            <!-- Development Status Banner -->
+            <div style="background: rgba(212, 175, 55, 0.1); border: 1px solid var(--primary-gold); color: var(--primary-gold); text-align: center; padding: 10px 20px; font-size: 0.9em; font-weight: 600; border-radius: 20px; display: inline-block; margin-top: 30px;">
+                <span class="lang-en"><i class="fas fa-tools" style="margin-right: 8px;"></i> Currently in development phase. Join discussions to share your ideas!</span>
+                <span class="lang-tr"><i class="fas fa-tools" style="margin-right: 8px;"></i> Şu anda geliştirme aşamasında. Fikirlerinizi paylaşmak için tartışmalara katılın!</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reach Us / Footer -->
+    <footer id="reach" class="main-footer glass">
+        <div class="container" style="text-align: center; padding: 60px 0 40px;">
+            <div class="social-links big-social" style="display:flex; justify-content: center; margin-bottom: 30px; gap: 20px;">
+                <a href="https://github.com/AYASCELL" target="_blank" class="social-icon github-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/AYASCELL/ayas-discussions/discussions" target="_blank" class="social-icon" title="Community Discussions"><i class="fas fa-comments"></i></a>
+            </div>
+
+            <p class="copyright-text" style="opacity: 0.5;">© 2026 AYASCELL</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
