@@ -1131,6 +1131,13 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
+.footer-social-links .social-icon.linkedin-icon:hover {
+    color: #fff;
+    background: #0A66C2;
+    border-color: #0A66C2;
+    box-shadow: 0 0 15px rgba(10, 102, 194, 0.4);
+}
+
 .footer-social-links .social-icon.community-icon:hover {
     color: #fff;
     background: #6C5CE7;
