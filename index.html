@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
@@ -10,20 +10,30 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <!-- Önbellek Engelleme / Anlık Güncelleme Sonu -->
-    <title>Ayas OS | Linux Operating System</title>
+    <title>Ayas OS | Debian Tabanlı Modern Linux İşletim Sistemi — AYASCELL</title>
     
     <link rel="canonical" href="https://ayascell.com/AyasOS/">
-    <meta name="description" content="Debian tabanlı modern Linux işletim sistemi projesi.">
+    <link rel="alternate" hreflang="tr" href="https://ayascell.com/AyasOS/">
+    <link rel="alternate" hreflang="en" href="https://ayascell.com/AyasOS/">
+    <link rel="alternate" hreflang="x-default" href="https://ayascell.com/AyasOS/">
+    <meta name="description" content="Ayas OS — AYASCELL tarafından geliştirilen, Debian tabanlı, hafif, hızlı ve modern Linux işletim sistemi projesi ve resmi APT paket deposu.">
+    <meta name="keywords" content="Ayas OS, AYASCELL, Linux İşletim Sistemi, Debian Tabanlı Linux, Ayas OS APT Repo, Açık Kaynak İşletim Sistemi, Yerli Linux">
     <meta name="author" content="AYASCELL">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Ayas OS">
+    <meta property="og:site_name" content="Ayas OS | AYASCELL">
     <meta property="og:url" content="https://ayascell.com/AyasOS/">
-    <meta property="og:title" content="Ayas OS | Linux Operating System">
-    <meta property="og:description" content="Debian tabanlı modern Linux işletim sistemi projesi.">
-    <meta property="og:image" content="https://ayascell.com/assets/ayasoslogo.png">
+    <meta property="og:title" content="Ayas OS | Debian Tabanlı Modern Linux İşletim Sistemi — AYASCELL">
+    <meta property="og:description" content="AYASCELL tarafından geliştirilen Debian tabanlı modern Linux işletim sistemi projesi.">
+    <meta property="og:image" content="https://ayascell.com/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -32,31 +42,60 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ayas OS | Linux Operating System">
-    <meta name="twitter:description" content="Debian tabanlı modern Linux işletim sistemi projesi.">
+    <meta name="twitter:title" content="Ayas OS | Debian Tabanlı Modern Linux İşletim Sistemi — AYASCELL">
+    <meta name="twitter:description" content="AYASCELL tarafından geliştirilen Debian tabanlı modern Linux işletim sistemi projesi.">
     <meta name="twitter:image" content="https://ayascell.com/assets/og-image.png">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Ayas OS",
-      "operatingSystem": "Linux",
-      "applicationCategory": "OperatingSystem",
-      "url": "https://ayascell.com/AyasOS/",
-      "image": "https://ayascell.com/assets/ayascell-logo-dark.png",
-      "author": {
-        "@type": "Person",
-        "name": "AYASCELL",
-        "url": "https://ayascell.com/"
-      }
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://ayascell.com/AyasOS/#software",
+          "name": "Ayas OS",
+          "operatingSystem": "Linux (Debian-based)",
+          "applicationCategory": "OperatingSystem",
+          "url": "https://ayascell.com/AyasOS/",
+          "image": "https://ayascell.com/assets/ayasoslogo.png",
+          "description": "Debian tabanlı, performans ve sadelik odaklı modern Linux işletim sistemi projesi.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "TRY"
+          },
+          "author": {
+            "@type": "Organization",
+            "@id": "https://ayascell.com/#organization",
+            "name": "AYASCELL",
+            "url": "https://ayascell.com/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "AYASCELL",
+              "item": "https://ayascell.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Ayas OS",
+              "item": "https://ayascell.com/AyasOS/"
+            }
+          ]
+        }
+      ]
     }
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20261115_170758">
 
     <style>
         /* Base specific styles */
@@ -207,6 +246,10 @@
                 <span class="footer-divider">•</span>
                 <a href="https://ayascell.com/ecosystem/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">Ayascell Ecosystem</span><span class="lang-en">Ayascell Ecosystem</span></a>
                 <span class="footer-divider">•</span>
+                <a href="https://ayasprog.ayascell.com/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">AyasProg</span><span class="lang-en">AyasProg</span></a>
+                <span class="footer-divider">•</span>
+                <a href="https://ayastools.ayascell.com/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">AyasTools</span><span class="lang-en">AyasTools</span></a>
+                <span class="footer-divider">•</span>
                 <a href="index.html"><span class="lang-tr">Ayas OS</span><span class="lang-en">Ayas OS</span></a>
                 <span class="footer-divider">•</span>
                 <a href="https://ayascell.com/ayas-discussions/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">Topluluk</span><span class="lang-en">Community</span></a>
@@ -217,7 +260,7 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20261115_170758"></script>
 </body>
 
 </html>
